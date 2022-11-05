@@ -1,0 +1,24 @@
+package tvnh.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import tvnh.entity.Odor;
+import tvnh.repo.OdorRepo;
+import tvnh.service.OdorService;
+
+@Service
+public class OdorServiceImpl  implements OdorService{
+
+
+	@Autowired
+	private OdorRepo repo;
+	
+	@Override
+	public List<Odor> getAll() {
+		return repo.findAll();
+	}
+
+}
