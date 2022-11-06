@@ -29,5 +29,5 @@ public class Quality {
 	
 	@OneToMany(mappedBy = "quality")
 	 @JsonIgnore
-	 private List<Case> cases = new ArrayList<>();
+	 private List<Cases> cases = new ArrayList<>();
 }

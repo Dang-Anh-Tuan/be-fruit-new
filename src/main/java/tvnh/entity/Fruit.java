@@ -22,5 +22,5 @@ public class Fruit {
 	
 	 @OneToMany(mappedBy = "fruit")
 	 @JsonIgnore
-	 private List<Case> cases = new ArrayList<>();
+	 private List<Cases> cases = new ArrayList<>();
 }

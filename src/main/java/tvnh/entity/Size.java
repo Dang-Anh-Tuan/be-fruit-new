@@ -23,5 +23,5 @@ public class Size {
 	
 	@OneToMany(mappedBy = "size")
 	@JsonIgnore
-	private List<Case> cases = new ArrayList<>();
+	private List<Cases> cases = new ArrayList<>();
 }

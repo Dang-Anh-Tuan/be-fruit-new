@@ -22,5 +22,5 @@ public class Color {
 	
 	@OneToMany(mappedBy = "color")
 	@JsonIgnore
-	private List<Case> cases = new ArrayList<>();
+	private List<Cases> cases = new ArrayList<>();
 }
