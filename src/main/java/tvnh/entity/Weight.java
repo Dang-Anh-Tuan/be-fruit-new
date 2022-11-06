@@ -22,5 +22,5 @@ public class Weight {
 	
 	@OneToMany(mappedBy = "weight")
 	@JsonIgnore
-	private List<Case> cases = new ArrayList<>();
+	private List<Cases> cases = new ArrayList<>();
 }

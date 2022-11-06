@@ -22,5 +22,5 @@ public class Odor {
 	
 	@OneToMany(mappedBy = "odor")
 	@JsonIgnore
-	private List<Case> cases = new ArrayList<>();
+	private List<Cases> cases = new ArrayList<>();
 }
