@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tvnh.dto.InfoFormCaseDTO;
 import tvnh.dto.ResultFormCaseDTO;
-import tvnh.entity.Case;
+import tvnh.entity.Cases;
 import tvnh.entity.Color;
 import tvnh.entity.Fruit;
 import tvnh.entity.Odor;
 import tvnh.entity.Quality;
 import tvnh.entity.Size;
 import tvnh.entity.Weight;
-import tvnh.service.CaseService;
+import tvnh.service.CasesService;
 import tvnh.service.ColorService;
 import tvnh.service.FruitService;
 import tvnh.service.OdorService;
@@ -51,7 +51,7 @@ public class FormCase {
 	private QualityService qualityService;
 	
 	@Autowired 
-	private CaseService caseService;
+	private CasesService casesService;
 	
 	@GetMapping("/get-info")
 	public InfoFormCaseDTO getAll(){
@@ -99,7 +99,7 @@ public class FormCase {
 		Odor odor = orOdorService.getById(resultFormCaseDTO.getIdOdor());
 		Quality quality = qualityService.getById(resultFormCaseDTO.getIdQuality());
 		
-		Case c = new Case();
+		Cases c = new Cases();
 		c.setFruit(fruit);
 		c.setSize(size);
 		c.setWeight(weight);
@@ -107,7 +107,7 @@ public class FormCase {
 		c.setColor(color);
 		c.setQuality(quality);
 		
-		Boolean result = caseService.create(c);
+		Boolean result = casesService.create(c);
 		
 		return result;
 	}

@@ -6,4 +6,6 @@ import tvnh.entity.Cases;
 
 public interface CasesService {
 	List<Cases> getAll();
+
+	Boolean create(Cases c);
 }
