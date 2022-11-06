@@ -6,4 +6,6 @@ import tvnh.entity.Fruit;
 
 public interface FruitService {
 	List<Fruit> getAll();
+	
+	Fruit getById(Integer id);
 }
