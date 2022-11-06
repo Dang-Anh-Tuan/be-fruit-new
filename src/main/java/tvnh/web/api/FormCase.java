@@ -91,10 +91,6 @@ public class FormCase {
 	
 	@PostMapping("/create")
 	public Boolean create(@RequestBody ResultFormCaseDTO resultFormCaseDTO) {
-		System.out.print("----------------------------------------------");
-		System.out.print(resultFormCaseDTO.getIdFruit());
-		System.out.print("----------------------------------------------");
-		
 		Fruit fruit = fruitService.getById(resultFormCaseDTO.getIdFruit());
 		Size size = sizeService.getById(resultFormCaseDTO.getIdSize());
 		Weight weight = weightService.getById(resultFormCaseDTO.getIdWeight());

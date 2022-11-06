@@ -1,11 +1,13 @@
 package tvnh.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tvnh.entity.Cases;
+import tvnh.entity.Fruit;
 import tvnh.repo.CasesRepo;
 import tvnh.service.CasesService;
 
@@ -29,5 +31,10 @@ public class CasesServiceImpl  implements CasesService{
 			return true;
 		}
 		return false;
+	}
+
+	@Override
+	public List<Cases> getByFruit(Fruit fruit) {
+		return repo.findByFruit(fruit);
 	}
 }
