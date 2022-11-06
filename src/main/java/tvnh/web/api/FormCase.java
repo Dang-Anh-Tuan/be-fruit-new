@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -89,8 +90,10 @@ public class FormCase {
 	}
 	
 	@PostMapping("/create")
-	public Boolean create(ResultFormCaseDTO resultFormCaseDTO) {
+	public Boolean create(@RequestBody ResultFormCaseDTO resultFormCaseDTO) {
+		System.out.print("----------------------------------------------");
 		System.out.print(resultFormCaseDTO.getIdFruit());
+		System.out.print("----------------------------------------------");
 		
 		Fruit fruit = fruitService.getById(resultFormCaseDTO.getIdFruit());
 		Size size = sizeService.getById(resultFormCaseDTO.getIdSize());
