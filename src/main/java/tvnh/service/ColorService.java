@@ -6,4 +6,6 @@ import tvnh.entity.Color;
 
 public interface ColorService {
 	List<Color> getAll();
+	
+	Color getByID(Integer id);
 }

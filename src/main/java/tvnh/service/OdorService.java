@@ -6,4 +6,6 @@ import tvnh.entity.Odor;
 
 public interface OdorService {
 	List<Odor> getAll();
+	
+	Odor getById(Integer id);
 }

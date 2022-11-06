@@ -16,27 +16,27 @@ public class Cases {
 	private Integer id;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_fruit", referencedColumnName = "id")
+	@JoinColumn(name = "idFruit", referencedColumnName = "id")
 	private Fruit fruit;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_size", referencedColumnName = "id")
+	@JoinColumn(name = "idSize", referencedColumnName = "id")
 	private Size size;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_weight", referencedColumnName = "id")
+	@JoinColumn(name = "idWeight", referencedColumnName = "id")
 	private Weight weight;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_color", referencedColumnName = "id")
+	@JoinColumn(name = "idColor", referencedColumnName = "id")
 	private Color color;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_odor", referencedColumnName = "id")
+	@JoinColumn(name = "idOdor", referencedColumnName = "id")
 	private Odor odor;
 	
 	@ManyToOne
-	@JoinColumn(name = "id_quality", referencedColumnName = "id")
+	@JoinColumn(name = "idQuality", referencedColumnName = "id")
 	private Quality quality;
 
 }
