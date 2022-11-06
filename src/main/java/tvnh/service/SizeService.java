@@ -6,4 +6,6 @@ import tvnh.entity.Size;
 
 public interface SizeService {
 	List<Size> getAll();
+	
+	Size getById(Integer id);
 }

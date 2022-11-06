@@ -22,4 +22,12 @@ public class CasesServiceImpl  implements CasesService{
 		return repo.findAll();
 	}
 
+	@Override
+	public Boolean create(Cases c) {
+		Cases result = repo.save(c);
+		if(result != null) {
+			return true;
+		}
+		return false;
+	}
 }
