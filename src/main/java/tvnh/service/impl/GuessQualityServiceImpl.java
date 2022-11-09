@@ -82,29 +82,6 @@ public class GuessQualityServiceImpl implements GuessQualityService {
 		System.out.println("Cases correct : " + countCorrectCase);
 		System.out.println("Total case test : " + listCaseTest.size());
 		System.out.println("% correct : " + ((double)countCorrectCase/listCaseTest.size()) * 100 + "%") ;
-//		listCaseTest.forEach((item -> {
-//			Fruit fruit = fruitService.getById(Integer.valueOf(getIntegerNum(item.getIdFruit().toString())));
-//			Size size = sizeService.getById(Integer.valueOf(getIntegerNum(item.getIdSize().toString())));
-//			Weight weight = weightService.getById(Integer.valueOf(getIntegerNum(item.getIdWeight().toString())));
-//			Color color = colorService.getByID(Integer.valueOf(getIntegerNum(item.getIdColor().toString())));
-//			Odor odor = orOdorService.getById(Integer.valueOf(getIntegerNum(item.getIdOdor().toString())));
-//
-//			Cases c = new Cases();
-//			c.setFruit(fruit);
-//			c.setSize(size);
-//			c.setWeight(weight);
-//			c.setOdor(odor);
-//			c.setColor(color);
-//			List<Cases> cases = casesService.getByFruit(fruit);
-//
-//			Quality quality = CBR.logicCBR(cases, c);
-//			
-//			
-//			if(quality.getId() == Integer.valueOf(getIntegerNum(item.getIdQuality().toString()))){
-//				countCorrectCase += 1;
-//			}
-//		}));
-
 	}
 
 	public static String getIntegerNum(String s) {
